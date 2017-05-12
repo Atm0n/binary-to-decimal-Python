@@ -1,19 +1,17 @@
 # To choose a converter you need to write the function decimal(num) or binary(num)
 
 
-# DECIMAL SIDE
 def decimal(decimalin):
-
+    decimalin =int(decimalin)
     rest ="" #needed to work
     while True:
         rest += str(decimalin % 2)
         decimalin = decimalin // 2
-
+        
         if decimalin == 0:
             break
 
     return rest[::-1]
-
 
 # BINARY SIDE
 
