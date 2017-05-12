@@ -3,15 +3,17 @@
 
 # DECIMAL SIDE
 def decimal(decimalin):
-    decimalin= int(decimalin)
-    a = True #This mades work the while
+
     rest ="" #needed to work
-    while not a == False:
-        rest = str(int(decimalin % 2)) + rest #here I grab the rest of the division
-        decimalin= decimalin / 2  #here we made the division
-        if decimalin < 1:
-            a = False #stops the while
-    print("This is your decimal to binary result " + rest ) #result output
+    while True:
+        rest += str(decimalin % 2)
+        decimalin = decimalin // 2
+
+        if decimalin == 0:
+            break
+
+    return rest[::-1]
+
 
 # BINARY SIDE
 
@@ -41,4 +43,5 @@ def binary(binaryin):
 ##        print(binarydecimal1) #test
         binarydecimal=binarydecimal+binarydecimal1
         binarynum = binarynum +1
-    print("This is your binary to decimal result " + str(binarydecimal))
+    
+    return binarydecimal
