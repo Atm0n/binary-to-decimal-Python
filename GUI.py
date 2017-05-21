@@ -1,4 +1,4 @@
-a#!/usr/bin/env python3
+#!/usr/bin/env python3
 import sys, os
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
